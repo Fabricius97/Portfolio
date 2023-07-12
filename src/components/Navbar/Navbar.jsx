@@ -38,14 +38,14 @@ const Navbar = () => {
         alignItems: "center",
         width: "100%",
         position: "fixed",
-        backgroundColor: isScrolled ? "#0d012c" : "transparent",
+        backgroundColor: isScrolled ? "#101C25" : "transparent",
         transition: "background-color 0.3s",
         zIndex: 1000,
       }}
     >
       <Box
         sx={{
-          padding: { xs: "0 43px", md: "0 100px" },
+          padding: { xs: "0 43px", md: "0 200px" },
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -65,7 +65,7 @@ const Navbar = () => {
           <Box className="navbar__contact">KONTAKT</Box>
         </Box>
         <Box className="navbar__name" sx={{ letterSpacing: "3px" }}>
-          CHRISTOFFER FABRICIUS
+          CF
         </Box>
         <Box
           className="navbar__links"

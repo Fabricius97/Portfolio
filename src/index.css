@@ -2,9 +2,9 @@ body {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: #0d012c;
+  background-color: #101c25;
   color: white;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif !important;
+  font-weight: 800;
   box-sizing: border-box;
 }

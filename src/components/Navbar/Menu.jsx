@@ -12,7 +12,7 @@ const Menu = ({ menuOpen, menuClose }) => {
         sx={{
           width: "100%",
           height: "100vh",
-          backgroundColor: "#0d012c",
+          backgroundColor: "#101C25",
           position: "fixed",
           top: 0,
           right: 0,

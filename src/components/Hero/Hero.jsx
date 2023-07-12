@@ -1,6 +1,13 @@
 import React from "react";
-import { Box } from "@mui/material";
-import HeroBackground from "../../../public/159Z_2107.w026.n002.628B.p1.628.jpg";
+import { Box, Button } from "@mui/material";
+import { styled } from "@mui/system";
+import HeroBackground from "../../../src/assets/images/beautiful-milky-way-night-sky.jpg";
+
+const StyledText = styled("h1")(() => ({
+  background: "linear-gradient(270deg,#050a0d,#ffffff);",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+}));
 
 const Hero = () => {
   return (
@@ -19,28 +26,40 @@ const Hero = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          maxWidth: "40%",
-          height: "70vh",
+          maxWidth: "100%",
+          textAlign: "center",
+          height: "100vh",
           flexDirection: "column",
-          fontSize: "20px",
-          border: "1px solid white",
-          paddingLeft: "100px",
+          fontSize: { xs: "18px", sm: "25px", md: "30px" },
+          padding: { xs: "0 30px", sm: "0 43px", md: "0 200px" },
           letterSpacing: "3px",
+          "& h1": {
+            fontFamily: "Josefin Sans",
+          },
         }}
       >
-        <p>WEBBUTVECKLARE</p>
-        {/* <h1
-          style={{
-            color: "var(--white)",
-            fontSize: "4rem",
-            fontWeight: "800",
-            marginBottom: "20px",
-            WebkitTextFillColor: "transparent",
-            WebkitBackgroundClip: "text",
-          }}
-        >
-          Christoffer Fabricius
-        </h1> */}
+        <Box>
+          <p style={{ color: "#ffef0099", fontStyle: "italic" }}>
+            WEBBUTVECKLARE
+          </p>
+
+          <StyledText>CHRISTOFFER FABRICIUS</StyledText>
+          <Button
+            variant="outlined"
+            size="large"
+            sx={{
+              color: "#ffffff",
+              fontWeight: "bold",
+              borderColor: "#ffffff",
+              "&:hover": {
+                borderColor: "#ffffff",
+              },
+              letterSpacing: "3px",
+            }}
+          >
+            PROJEKT
+          </Button>
+        </Box>
       </Box>
     </Box>
   );
