@@ -1,4 +1,4 @@
-import { Box, Grid, Slide } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
