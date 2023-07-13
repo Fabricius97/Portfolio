@@ -30,7 +30,7 @@ const Skills = () => {
     <Box
       sx={{
         width: "100%",
-        height: "50vh",
+        minHeight: "50vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -40,8 +40,8 @@ const Skills = () => {
       <Box
         sx={{
           maxWidth: "100%",
-          padding: { xs: "0 30px", sm: "0 43px", md: "0 100px" },
-          height: "200px",
+          padding: { xs: "30px", sm: "0 43px", md: "0 100px" },
+          height: "auto",
         }}
       >
         <Grid container justifyContent="center" spacing={2}>

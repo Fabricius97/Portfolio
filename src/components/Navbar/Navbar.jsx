@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "./Menu";
 
-const Navbar = () => {
+const Navbar = ({ clickToScroll }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -61,8 +61,29 @@ const Navbar = () => {
             letterSpacing: "3px",
           }}
         >
-          <Box className="navbar__about">OM MIG</Box>
-          <Box className="navbar__contact">KONTAKT</Box>
+          <Button
+            variant="text"
+            size="large"
+            onClick={clickToScroll}
+            sx={{
+              color: "#ffffff",
+              fontWeight: "bold",
+              letterSpacing: "3px",
+            }}
+          >
+            OM MIG
+          </Button>
+          <Button
+            variant="text"
+            size="large"
+            sx={{
+              color: "#ffffff",
+              fontWeight: "bold",
+              letterSpacing: "3px",
+            }}
+          >
+            KONTAKT
+          </Button>
         </Box>
         <Box className="navbar__name" sx={{ letterSpacing: "3px" }}>
           CF
