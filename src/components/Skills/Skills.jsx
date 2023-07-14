@@ -40,7 +40,7 @@ const Skills = () => {
       <Box
         sx={{
           maxWidth: "100%",
-          padding: { xs: "30px", sm: "0 43px", md: "0 100px" },
+          padding: { xs: "30px", sm: "50px 43px", md: "100px 200px" },
           height: "auto",
         }}
       >
