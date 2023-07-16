@@ -9,7 +9,7 @@ const StyledText = styled("h1")(() => ({
   WebkitTextFillColor: "transparent",
 }));
 
-const Hero = () => {
+const Hero = ({ clickToScroll }) => {
   return (
     <Box
       sx={{
@@ -45,6 +45,7 @@ const Hero = () => {
 
           <StyledText>CHRISTOFFER FABRICIUS</StyledText>
           <Button
+            onClick={clickToScroll}
             variant="outlined"
             size="large"
             sx={{

@@ -69,6 +69,7 @@ const Navbar = ({ clickToScroll }) => {
               color: "#ffffff",
               fontWeight: "bold",
               letterSpacing: "3px",
+              paddingLeft: "0px",
             }}
           >
             OM MIG

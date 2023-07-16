@@ -13,8 +13,8 @@ export const socialProof = [
     name: "Jakob Kebede | ",
     work: "Web Developer & Community Manager @ Techover",
     quote: `“Christoffer är hårt jobbande och väldigt disciplinerad i det han gör.
-    Tiden som jag har spenderat tillsammans med Christoffer har jag lärt mig att han är en väldigt bra på att lösa probelm, de få gånger som han ej har en lösning så på är han väldigt bra på att bryta ner problemet för att enkelt kunna be om hjälp eller metodiskt lösa problemet själv.
-    En väldigt trevlig kille som man har enkelt att dela ett gott skratt med. Christoffer evaluerar jag högt på en arbetsplats och under en AW.“`,
+    Tiden som jag har spenderat tillsammans med Christoffer har jag lärt mig att han är en väldigt bra på att lösa probelm, de få gånger som han ej har en lösning på är han väldigt bra på att bryta ner problemet för att enkelt kunna be om hjälp eller metodiskt lösa problemet själv.
+    En väldigt trevlig kille som man enkelt kan dela ett gott skratt med. Christoffer evaluerar jag högt på en arbetsplats och under en AW.“`,
     linkedinUrl: "https://www.linkedin.com/in/jakob-kebede-628370124/",
   },
 ];

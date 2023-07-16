@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Skills from "./components/Skills/Skills";
 import About from "./components/About/About";
+import Projects from "./components/Projects/Projects.jsx";
 
 function App() {
   const ref = useRef(null);
@@ -13,9 +14,10 @@ function App() {
   return (
     <div className="App">
       <Navbar clickToScroll={clickToScroll} />
-      <Hero />
+      <Hero clickToScroll={clickToScroll} />
       <Skills />
       <About setRef={ref} />
+      <Projects setRef={ref} />
     </div>
   );
 }

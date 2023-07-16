@@ -1,4 +1,4 @@
-import { Box, Link } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
 import { socialProof } from "../../socialProof.js";
 
@@ -8,39 +8,53 @@ const About = ({ setRef }) => {
       ref={setRef}
       id="about"
       sx={{
-        minHeight: "100vh",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "flex-start",
         flexDirection: { xs: "column", md: "column", lg: "row" },
-        padding: { xs: "0 43px", md: "0 200px", lg: "0 200px" },
+        padding: { xs: "50px 43px", md: "50px 200px", lg: "50px 200px" },
         boxSizing: "border-box",
-        gap: "40px",
+        gap: "10px",
       }}
     >
       <Box
         sx={{
-          height: "100%",
           width: "100%",
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: "flex-start",
+          flexDirection: "column",
+          boxSizing: "border-box",
         }}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum similique
-        reiciendis enim quas accusamus necessitatibus laborum, aliquam sunt
-        molestiae magni aspernatur nostrum eum dignissimos, aliquid vitae fugit
-        beatae ab debitis. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Rerum similique reiciendis enim quas accusamus necessitatibus
-        laborum, aliquam sunt molestiae magni aspernatur nostrum eum
-        dignissimos, aliquid vitae fugit beatae ab debitis. Lorem ipsum dolor
-        sit amet consectetur adipisicing elit. Rerum similique reiciendis enim
-        quas accusamus necessitatibus laborum, aliquam sunt molestiae magni
-        aspernatur nostrum eum dignissimos, aliquid vitae fugit beatae ab
-        debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-        similique reiciendis enim quas accusamus necessitatibus laborum, aliquam
-        sunt molestiae magni aspernatur nostrum eum dignissimos, aliquid vitae
-        fugit beatae ab debitis.
+        <h1>OM MIG</h1>
+        <p
+          style={{
+            padding: "10px",
+            letterSpacing: "1px",
+            fontStyle: "italic",
+            fontWeight: "300",
+            lineHeight: "1.3",
+          }}
+        >
+          Mitt namn är Christoffer och jag är en webbutvecklare med starka
+          kunskaper inom React, JavaScript, CSS, HTML och MERN-stacken. Jag är
+          övertygad om att jag kan bidra med värdefulla insikter och energi till
+          ert team. Som en passionerad problemlösare med en öppen och kreativ
+          inställning har jag funnit en stark passion för felsökning och
+          nyfikenhet. Tidigare har jag arbetat med fiber och kabel-TV där jag
+          utvecklade en skarp analytisk förmåga och en önskan att förstå roten
+          till problemet för att hitta hållbara lösningar. Jag trivs med att
+          arbeta i en dynamisk miljö där jag kan tillämpa mina färdigheter för
+          att skapa innovativa och användarvänliga lösningar. Utöver min
+          tekniska expertis är jag också en lagspelare som tror på betydelsen av
+          samarbete och öppen kommunikation. Jag är övertygad om att genom att
+          arbeta tillsammans kan vi skapa starka och hållbara webbapplikationer
+          som tillgodoser både företagets och användarnas behov. Min
+          flexibilitet och anpassningsförmåga gör att jag kan trivas i en
+          snabbrörlig arbetsmiljö och hantera nya utmaningar på ett effektivt
+          sätt.
+        </p>
       </Box>
       <Box
         sx={{
@@ -57,7 +71,6 @@ const About = ({ setRef }) => {
           <Box
             key={index}
             sx={{
-              width: "100%",
               display: "flex",
               justifyContent: "center",
               flexDirection: "column",
@@ -65,6 +78,7 @@ const About = ({ setRef }) => {
               backgroundColor: "#050a0d50",
               padding: "10px",
               boxShadow: "0px 0px 15px 1px rgba(0,0,0,0.75)",
+              boxSizing: "border-box",
             }}
           >
             <Box
@@ -104,10 +118,10 @@ const About = ({ setRef }) => {
               rel="noopener noreferrer"
               style={{
                 textDecoration: "none",
-                color: "inherit",
+                color: "#ffef0099",
               }}
             >
-              Linkedin
+              Kolla in {proof.name.split(" ")[0]}s profil i Linkedin!
             </a>
           </Box>
         ))}
