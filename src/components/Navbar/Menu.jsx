@@ -75,23 +75,6 @@ const Menu = ({
             size="large"
             onClick={() => {
               menuClose();
-              scrollToContact();
-            }}
-            sx={{
-              color: "#ffffff",
-              fontWeight: "bold",
-              letterSpacing: "3px",
-              fontSize: "30px",
-              padding: 0,
-            }}
-          >
-            KONTAKT
-          </Button>
-          <Button
-            variant="text"
-            size="large"
-            onClick={() => {
-              menuClose();
               scrollToProjects();
             }}
             sx={{
@@ -103,6 +86,23 @@ const Menu = ({
             }}
           >
             PROJEKT
+          </Button>
+          <Button
+            variant="text"
+            size="large"
+            onClick={() => {
+              menuClose();
+              scrollToContact();
+            }}
+            sx={{
+              color: "#ffffff",
+              fontWeight: "bold",
+              letterSpacing: "3px",
+              fontSize: "30px",
+              padding: 0,
+            }}
+          >
+            KONTAKT
           </Button>
           <a
             href="https://www.linkedin.com/in/christoffer-fabricius-06baab228/"
