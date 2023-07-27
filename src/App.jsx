@@ -42,7 +42,7 @@ function App() {
     // For demonstration purposes, we'll use setTimeout to simulate a delay
     const loadingDelay = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 4000);
 
     // Clean up the timeout to avoid memory leaks
     return () => {
