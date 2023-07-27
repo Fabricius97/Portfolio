@@ -1,17 +1,23 @@
 import React from "react";
-import { Box, Slide } from "@mui/material";
+import { Box, Button, Slide } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
-const Menu = ({ menuOpen, menuClose }) => {
+const Menu = ({
+  menuOpen,
+  menuClose,
+  scrollToAbout,
+  scrollToContact,
+  scrollToProjects,
+}) => {
   return (
     <Slide direction="left" in={menuOpen} mountOnEnter unmountOnExit>
       <Box
         id="Menu"
         sx={{
           width: "100%",
-          height: "100vh",
+          height: "100%",
           backgroundColor: "#101C25",
           position: "fixed",
           top: 0,
@@ -43,13 +49,61 @@ const Menu = ({ menuOpen, menuClose }) => {
             flexDirection: "column",
             alignItems: "center",
             marginTop: "80px",
-            gap: "50px",
+            gap: "30px",
             color: "#ffffff",
           }}
         >
-          <Box className="navbar__about">OM MIG</Box>
-          <Box className="navbar__contact">KONTAKT</Box>
-          <Box className="navbar__contact">PROJEKT</Box>
+          <Button
+            variant="text"
+            size="large"
+            onClick={() => {
+              menuClose();
+              scrollToAbout();
+            }}
+            sx={{
+              color: "#ffffff",
+              fontWeight: "bold",
+              letterSpacing: "3px",
+              fontSize: "30px",
+              padding: 0,
+            }}
+          >
+            OM MIG
+          </Button>
+          <Button
+            variant="text"
+            size="large"
+            onClick={() => {
+              menuClose();
+              scrollToContact();
+            }}
+            sx={{
+              color: "#ffffff",
+              fontWeight: "bold",
+              letterSpacing: "3px",
+              fontSize: "30px",
+              padding: 0,
+            }}
+          >
+            KONTAKT
+          </Button>
+          <Button
+            variant="text"
+            size="large"
+            onClick={() => {
+              menuClose();
+              scrollToProjects();
+            }}
+            sx={{
+              color: "#ffffff",
+              fontWeight: "bold",
+              letterSpacing: "3px",
+              fontSize: "30px",
+              padding: 0,
+            }}
+          >
+            PROJEKT
+          </Button>
           <a
             href="https://www.linkedin.com/in/christoffer-fabricius-06baab228/"
             target="_blank"

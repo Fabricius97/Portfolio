@@ -5,19 +5,52 @@ import Hero from "./components/Hero/Hero";
 import Skills from "./components/Skills/Skills";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects.jsx";
+import Contact from "./components/Contact/Contact";
 
 function App() {
-  const ref = useRef(null);
-  const clickToScroll = () =>
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollToAbout = () =>
+    aboutRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center",
+    });
+
+  const scrollToProjects = () =>
+    projectsRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+
+  const scrollToContact = () => {
+    const appHeight = document.body.scrollHeight;
+
+    window.scrollTo({
+      top: appHeight,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="App">
-      <Navbar clickToScroll={clickToScroll} />
-      <Hero clickToScroll={clickToScroll} />
+      <Navbar
+        scrollToAbout={scrollToAbout}
+        scrollToContact={scrollToContact}
+        scrollToProjects={scrollToProjects}
+      />
+      <Hero scrollToProjects={scrollToProjects} />
       <Skills />
-      <About setRef={ref} />
-      <Projects setRef={ref} />
+      <div ref={aboutRef}>
+        <About />
+      </div>
+      <div ref={projectsRef}>
+        <Projects />
+      </div>
+      <div ref={contactRef}>
+        <Contact />
+      </div>
     </div>
   );
 }

@@ -2,10 +2,10 @@ import { Box } from "@mui/material";
 import React from "react";
 import { socialProof } from "../../socialProof.js";
 
-const About = ({ setRef }) => {
+const About = ({ aboutRef }) => {
   return (
     <Box
-      ref={setRef}
+      ref={aboutRef}
       id="about"
       sx={{
         display: "flex",

@@ -5,7 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "./Menu";
 
-const Navbar = ({ clickToScroll }) => {
+const Navbar = ({ scrollToAbout, scrollToContact, scrollToProjects }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -41,16 +41,18 @@ const Navbar = ({ clickToScroll }) => {
         backgroundColor: isScrolled ? "#101C25" : "transparent",
         transition: "background-color 0.3s",
         zIndex: 1000,
+        padding: { xs: "0 30px", sm: "0 43px", md: "0 200px", lg: "0 200px" },
+        boxSizing: "border-box",
       }}
     >
       <Box
         sx={{
-          padding: { xs: "0 43px", md: "0 200px" },
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           width: "100%",
           color: "#ffffff",
+          boxSizing: "border-box",
         }}
       >
         <Box
@@ -64,7 +66,7 @@ const Navbar = ({ clickToScroll }) => {
           <Button
             variant="text"
             size="large"
-            onClick={clickToScroll}
+            onClick={scrollToAbout}
             sx={{
               color: "#ffffff",
               fontWeight: "bold",
@@ -77,6 +79,7 @@ const Navbar = ({ clickToScroll }) => {
           <Button
             variant="text"
             size="large"
+            onClick={scrollToContact}
             sx={{
               color: "#ffffff",
               fontWeight: "bold",
@@ -118,11 +121,20 @@ const Navbar = ({ clickToScroll }) => {
           </a>
         </Box>
         <MenuIcon
-          sx={{ display: { xs: "flex", md: "none" }, fontSize: "35px" }}
+          sx={{
+            display: { xs: "flex", md: "none" },
+            fontSize: "35px",
+          }}
           onClick={toggleMenu}
         />
       </Box>
-      <Menu menuOpen={menuOpen} menuClose={toggleMenu} />
+      <Menu
+        menuOpen={menuOpen}
+        menuClose={toggleMenu}
+        scrollToContact={scrollToContact}
+        scrollToAbout={scrollToAbout}
+        scrollToProjects={scrollToProjects}
+      />
     </Box>
   );
 };

@@ -9,12 +9,12 @@ const StyledText = styled("h1")(() => ({
   WebkitTextFillColor: "transparent",
 }));
 
-const Hero = ({ clickToScroll }) => {
+const Hero = ({ scrollToProjects }) => {
   return (
     <Box
       sx={{
         backgroundImage: `url(${HeroBackground})`,
-        width: "100%",
+        minWidth: "100%",
         height: "100vh",
         backgroundPosition: "center",
         backgroundSize: "cover",
@@ -26,11 +26,11 @@ const Hero = ({ clickToScroll }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          maxWidth: "100%",
+
           textAlign: "center",
           height: "100vh",
           flexDirection: "column",
-          fontSize: { xs: "18px", sm: "25px", md: "30px" },
+          fontSize: { xs: "13px", sm: "25px", md: "30px" },
           padding: { xs: "0 30px", sm: "0 43px", md: "0 200px" },
           letterSpacing: "3px",
           "& h1": {
@@ -45,7 +45,7 @@ const Hero = ({ clickToScroll }) => {
 
           <StyledText>CHRISTOFFER FABRICIUS</StyledText>
           <Button
-            onClick={clickToScroll}
+            onClick={scrollToProjects}
             variant="outlined"
             size="large"
             sx={{

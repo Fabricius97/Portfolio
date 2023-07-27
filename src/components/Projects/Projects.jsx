@@ -4,13 +4,13 @@ import { projects } from "./../../projects";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const Projects = ({ setRef }) => {
+const Projects = ({ projectRef }) => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
   return (
     <Box
-      ref={setRef}
+      ref={projectRef}
       id="project"
       sx={{
         width: "100%",
